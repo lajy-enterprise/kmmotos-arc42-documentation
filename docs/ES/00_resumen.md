@@ -29,6 +29,6 @@ A través de este caso de estudio ficticio, nos proponemos:
 ## ¡Que la documentación te acompañe!
 
 <div align="center">
-    <img src="../../resources/images/star_wars_death_star_3d_blueprint.jpeg" alt="Death Star Architecture - English" width="300"/>
+    <img src="../../resources/images/star_wars_death_star_3d_blueprint.png" alt="Death Star Architecture - English" width="300"/>
 </div>
 
