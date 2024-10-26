@@ -9,8 +9,8 @@ Welcome to the **Star Wars Death Star arc42 Documentation** repository! This pro
 ## Overview
 
 This repository is organized into two main sections:
-- **English Documentation** (`docs/EN`): Contains all arc42 sections in English.
-- **Spanish Documentation** (`docs/ES`): Contains all arc42 sections in Spanish.
+- **[English Documentation](docs/EN)** (`docs/EN`): Contains all arc42 sections in English.
+- **[Spanish Documentation](docs/ES)** (`docs/ES`): Contains all arc42 sections in Spanish.
 
 ## Documentation Sections (English)
 

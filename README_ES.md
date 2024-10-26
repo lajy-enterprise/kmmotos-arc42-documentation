@@ -9,8 +9,8 @@
 ## Descripción General
 
 Este repositorio está organizado en dos secciones principales:
-- **Documentación en Inglés** (`docs/EN`): Contiene todas las secciones de arc42 en inglés.
-- **Documentación en Español** (`docs/ES`): Contiene todas las secciones de arc42 en español.
+- **[Documentación en Inglés](docs/EN)**(`docs/EN`): Contiene todas las secciones de arc42 en inglés.
+- **[Documentación en Español](docs/ES)**(`docs/ES`): Contiene todas las secciones de arc42 en español.
 
 ## Secciones de la Documentación (Español)
 
