@@ -13,18 +13,18 @@ A través de este caso de estudio ficticio, nos proponemos:
 
 ## Contenidos
 
-1. [**Introducción y Objetivos**](01_introduction_and_goals.md) - Definición del propósito, partes interesadas y objetivos principales del proyecto Estrella de la Muerte.
-2. [**Restricciones**](02_constraints.md) - Restricciones externas e internas que moldean la arquitectura.
-3. [**Contexto y Alcance**](03_context_and_scope.md) - Delimitación del alcance, interacciones y dependencias de la Estrella de la Muerte con sistemas externos.
-4. [**Estrategia de Solución**](04_solution_strategy.md) - Estrategias centrales y decisiones de alto nivel para el diseño.
-5. [**Vista de Componentes**](05_building_block_view.md) - Componentes estructurales y su organización.
-6. [**Vista de Tiempo de Ejecución**](06_runtime_view.md) - Comportamiento e interacciones de los componentes en escenarios clave.
-7. [**Vista de Despliegue**](07_deployment_view.md) - Infraestructura y distribución de componentes a través de entornos.
-8. [**Conceptos Transversales**](08_crosscutting_concepts.md) - Conceptos técnicos aplicables a múltiples partes del sistema.
-9. [**Decisiones Arquitectónicas**](09_architectural_decisions.md) - Decisiones clave de arquitectura y sus motivaciones.
-10. [**Requisitos de Calidad**](10_quality_requirements.md) - Definición de objetivos de calidad y expectativas de rendimiento de la Estrella de la Muerte.
-11. [**Riesgos y Deuda Técnica**](11_risks_and_technical_debt.md) - Riesgos conocidos y áreas potenciales de deuda técnica.
-12. [**Glosario**](12_glossary.md) - Definiciones de términos importantes específicos de la arquitectura de la Estrella de la Muerte.
+1. [**Introducción y Objetivos**](01_introduccion_y_objetivos.md) - Definición del propósito, partes interesadas y objetivos principales del proyecto Estrella de la Muerte.
+2. [**Restricciones**](02_restricciones.md) - Restricciones externas e internas que moldean la arquitectura.
+3. [**Contexto y Alcance**](03_contexto_y_alcance.md) - Delimitación del alcance, interacciones y dependencias de la Estrella de la Muerte con sistemas externos.
+4. [**Estrategia de Solución**](04_estrategia_de_solucion.md) - Estrategias centrales y decisiones de alto nivel para el diseño.
+5. [**Vista de Componentes**](05_vista_de_componentes.md) - Componentes estructurales y su organización.
+6. [**Vista de Tiempo de Ejecución**](06_vista_de_tiempo_de_ejecucion.md) - Comportamiento e interacciones de los componentes en escenarios clave.
+7. [**Vista de Despliegue**](07_vista_de_despliegue.md) - Infraestructura y distribución de componentes a través de entornos.
+8. [**Conceptos Transversales**](08_conceptos_transversales.md) - Conceptos técnicos aplicables a múltiples partes del sistema.
+9. [**Decisiones Arquitectónicas**](09_decisiones_arquitectonicas.md) - Decisiones clave de arquitectura y sus motivaciones.
+10. [**Requisitos de Calidad**](10_requisitos_de_calidad.md) - Definición de objetivos de calidad y expectativas de rendimiento de la Estrella de la Muerte.
+11. [**Riesgos y Deuda Técnica**](11_riesgos_y_deuda_tecnica.md) - Riesgos conocidos y áreas potenciales de deuda técnica.
+12. [**Glosario**](12_glosario.md) - Definiciones de términos importantes específicos de la arquitectura de la Estrella de la Muerte.
 
 ## ¡Que la documentación te acompañe!
 
