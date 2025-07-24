@@ -1,19 +1,16 @@
-# Arquitectura de la Estrella de la Muerte - Resumen de arc42
+# Documentacion de Aplicacion Km motos Dev 2.0 - Sistema de Gestión Empresarial para Venta de Motocicletas
 
 ## Introducción
 
-Esta documentación proporciona un ejemplo ficticio de cómo documentar la arquitectura de un sistema complejo como la Estrella de la Muerte utilizando el modelo **arc42**. El modelo arc42 estructura la documentación arquitectónica en secciones clave, facilitando la comunicación de las decisiones de diseño, la estructura y los requisitos de sistemas complejos.
+Esta documentacion detalla el plan de desarrollo para la aplicación KMMotos, un sistema integral de gestión empresarial diseñado para optimizar las operaciones de una empresa dedicada a la venta de motocicletas. El proyecto se aborda en fases incrementales, lo que permite una entrega de valor progresiva y una adaptación ágil a las necesidades del negocio
 
-## Propósito de Este Ejemplo
+## Alcance del Proyecto
 
-A través de este caso de estudio ficticio, nos proponemos:
-- Ilustrar cómo se puede aplicar cada sección de arc42 a un sistema avanzado.
-- Ofrecer una herramienta educativa para arquitectos de software y fanáticos de Star Wars.
-- Demostrar la importancia de la documentación estructurada para identificar riesgos y asegurar la calidad.
+El alcance de este proyecto se centra exclusivamente en la creación de una aplicación web para gestionar las operaciones internas de KMMotos. No se contempla el desarrollo de aplicaciones móviles (iOS/Android) ni aplicaciones de escritorio y dado que es un dashboard privado para uso interno de la empresa, no es necesario implementar estrategias de SEO (Search Engine Optimization). Sin embargo, se prioriza la facilidad de uso y la optimización para el usuario final, garantizando una experiencia intuitiva y eficiente
 
 ## Contenidos
 
-1. [**Introducción y Objetivos**](01_introduccion_y_objetivos.md) - Definición del propósito, partes interesadas y objetivos principales del proyecto Estrella de la Muerte.
+1. [**Introducción y Objetivos**](01_introduccion_y_objetivos.md) - Definición del propósito, partes interesadas y objetivos principales del proyecto.
 2. [**Restricciones**](02_restricciones.md) - Restricciones externas e internas que moldean la arquitectura.
 3. [**Contexto y Alcance**](03_contexto_y_alcance.md) - Delimitación del alcance, interacciones y dependencias de la Estrella de la Muerte con sistemas externos.
 4. [**Estrategia de Solución**](04_estrategia_de_solucion.md) - Estrategias centrales y decisiones de alto nivel para el diseño.
