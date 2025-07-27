@@ -1,41 +1,40 @@
-# Star Wars Death Star arc42 Documentation
+# Documentación de la Aplicacion de Facturacion y Gestion para la Empresa Kmmotos en el Modelo arc42
 
 <div align="center">
-    <img src="resources/images/star_wars_death_star_architecture_EN.png" alt="Death Star Architecture - English" width="600"/>
+    <img src="resources/images/appinfinitum.jpeg" alt="AppInfinitum Kmmotos Web App" width="600"/>
 </div>
 
-Welcome to the **Star Wars Death Star arc42 Documentation** repository! This project aims to document the fictional architecture of the **Death Star** by applying the **arc42 model**, a popular framework for structured software architecture documentation. Inspired by the Star Wars universe, this project provides an educational example of applying arc42 to a complex system, exploring each section in detail.
+¡Bienvenido al repositorio de **Documentación de la Aplicacion de Facturacion y Gestion para la Empresa Kmmotos con arc42**! Este proyecto tiene como objetivo documentar la arquitectura, infraestructura, Conceptos, temas de interes y despliegue de la **Documentación de la Aplicacion de Facturacion y Gestion para la Empresa Kmmotos** aplicando el modelo **arc42**, un marco popular para la documentación estructurada de arquitecturas de software. Este documentación ofrece un vistaso importante de este sistema complejo, explorando cada sección en detalle.
 
-## Overview
+## Descripción General
 
-This repository is organized into two main sections:
-- **[English Documentation](docs/EN)** (`docs/EN`): Contains all arc42 sections in English.
-- **[Spanish Documentation](docs/ES)** (`docs/ES`): Contains all arc42 sections in Spanish.
+Este repositorio está organizado en diversas secciones, que forman parte de la documentación en Español:
 
-## Documentation Sections (English)
+- **[Documentación en Español](docs/ES)**(`docs/ES`): Contiene todas las secciones de arc42 en español.
 
-1. [00. Overview](docs/EN/00_overview.md)
-2. [01. Introduction and Goals](docs/EN/01_introduction_and_goals.md)
-3. [02. Constraints](docs/EN/02_constraints.md)
-4. [03. Context and Scope](docs/EN/03_context_and_scope.md)
-5. [04. Solution Strategy](docs/EN/04_solution_strategy.md)
-6. [05. Building Block View](docs/EN/05_building_block_view.md)
-7. [06. Runtime View](docs/EN/06_runtime_view.md)
-8. [07. Deployment View](docs/EN/07_deployment_view.md)
-9. [08. Crosscutting Concepts](docs/EN/08_crosscutting_concepts.md)
-10. [09. Architectural Decisions](docs/EN/09_architectural_decisions.md)
-11. [10. Quality Requirements](docs/EN/10_quality_requirements.md)
-12. [11. Risks and Technical Debt](docs/EN/11_risks_and_technical_debt.md)
-13. [12. Glossary](docs/EN/12_glossary.md)
+## Secciones de la Documentación (Español)
 
-## Resources
+1. [00. Resumen](docs/ES/00_resumen.md)
+2. [01. Introducción y Objetivos](docs/ES/01_introduccion_y_objetivos.md)
+3. [02. Restricciones](docs/ES/02_restricciones.md)
+4. [03. Contexto y Alcance](docs/ES/03_contexto_y_alcance.md)
+5. [04. Estrategia de Solución](docs/ES/04_estrategia_de_solucion.md)
+6. [05. Vista de Componentes](docs/ES/05_vista_de_componentes.md)
+7. [06. Vista de Tiempo de Ejecución](docs/ES/06_vista_de_tiempo_de_ejecucion.md)
+8. [07. Vista de Despliegue](docs/ES/07_vista_de_despliegue.md)
+9. [08. Conceptos Transversales](docs/ES/08_conceptos_transversales.md)
+10. [09. Decisiones Arquitectónicas](docs/ES/09_decisiones_arquitectonicas.md)
+11. [10. Requisitos de Calidad](docs/ES/10_requisitos_de_calidad.md)
+12. [11. Riesgos y Deuda Técnica](docs/ES/11_riesgos_y_deuda_tecnica.md)
+13. [12. Glosario](docs/ES/12_glosario.md)
 
-The following resources support the documentation:
-- **Diagrams**: Architecture diagrams and visuals illustrating different aspects of the Death Star’s system design.
-- **Icons**: Icons and other Star Wars-related visuals used for better understanding.
+## Recursos
 
-## About arc42
+Los siguientes recursos apoyan la documentación:
 
-arc42 is a standardized template for documenting software architectures. Developed by software architects for practical, structured documentation, arc42 is widely used for complex systems. This repository uses the Death Star as a fictional case study to demonstrate each arc42 section in practice.
+- **Diagramas**: Diagramas y visuales de arquitectura que ilustran diferentes aspectos del diseño del sistema.
+- **Iconos**: Iconos y otros recursos visuales relacionados con la comprensión del desarrollo.
 
-May the documentation be with you!
+## Sobre arc42
+
+arc42 es una plantilla estandarizada para la documentación de arquitecturas de software. Desarrollada por arquitectos de software para una documentación práctica y estructurada, arc42 es ampliamente utilizada en sistemas complejos.
