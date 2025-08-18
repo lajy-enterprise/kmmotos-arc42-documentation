@@ -262,11 +262,6 @@ A medida que KMMotos crece y potencialmente opera múltiples tiendas o bodegas, 
   - Configuración y gestión de diferentes almacenes y tiendas.
   - Control de inventario por ubicación (Visualizacion de inventario de tenancies Foraneos).
 
-- **Transferencias:**
-
-  - Gestión de transferencias entre Tiendas y Bodegas del mismo tenancy.
-    - Convercion de transferencia a compra y venta local (Interna) entre empresas para el manejo de inventario y procesos financieros entre Empresas.
-
 - **Compras Locales (a Proveedores):**
 
   - Creación de órdenes de compra.
@@ -295,11 +290,12 @@ A medida que KMMotos crece y potencialmente opera múltiples tiendas o bodegas, 
 
 - **Transferencias de Inventario:**
 
-  - Registro de movimientos de productos entre tiendas o de bodega a tienda.
+  - Gestión de transferencias entre Tiendas y Bodegas del mismo tenancy.
+    - Convercion de transferencia a compra y venta local (Interna) entre empresas para el manejo de inventario y procesos financieros entre Empresas.
   - Seguimiento del estado de las transferencias.
   - Conciliación de inventario.
 
-- **Gestión de Equipos / Vienes de la Empresa:**
+- **Gestión de Equipos / Materiales / Vienes de la Empresa:**
 
   - Registro de equipos y vienes de la empresa.
   - Gestión de equipos y vienes de la empresa.
