@@ -45,6 +45,6 @@ La elección de la arquitectura actual para la aplicacion es una decisión estra
 
 ## Justificación de la Arquitectura Monolítica Modular para la Aplicación en Base a las restricciones actuales del Proyecto
 
-La elección de una **arquitectura monolítica modular** para el _backend_ de la aplicación centrada en la funcionalidad de un Punto de Venta (POS) de KMMOTOS no es arbitraria; es una **respuesta estratégica y eficiente a las limitaciones y necesidades específicas** del proyecto. Lejos de ser una imposición, esta elección se alinea perfectamente con los recursos disponibles y los objetivos de desarrollo, destacando sus beneficios inherentes.
+La elección de una **arquitectura monolítica modular** para el _backend_ de la aplicación centrada en la funcionalidad de un Punto de Venta (POS - Face Central del Desarrollo) de KMMOTOS no es arbitraria; es una **respuesta estratégica y eficiente a las limitaciones y necesidades específicas** del proyecto. Lejos de ser una imposición, esta elección se alinea perfectamente con los recursos disponibles y los objetivos de desarrollo, destacando sus beneficios inherentes.
 
 En conclusión, la **arquitectura monolítica modular no es solo una opción viable, sino la más sólida y apropiada** para KMMOTOS, dado el conjunto de restricciones internas y externas. Permite una **rápida entrega de valor**, garantiza la **integridad transaccional**, optimiza el **uso de recursos y presupuesto**, y se alinea con la **capacidad operativa del equipo**, sentando una base robusta para el crecimiento futuro.
