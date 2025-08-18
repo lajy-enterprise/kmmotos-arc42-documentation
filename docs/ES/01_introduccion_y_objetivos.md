@@ -265,7 +265,6 @@ A medida que KMMotos crece y potencialmente opera múltiples tiendas o bodegas, 
 - **Transferencias:**
 
   - Gestión de transferencias entre Tiendas y Bodegas del mismo tenancy.
-  - Gestión de transferencias entre Tiendas y Bodegas del Diferentes TYenancies.
     - Convercion de transferencia a compra y venta local (Interna) entre empresas para el manejo de inventario y procesos financieros entre Empresas.
 
 - **Compras Locales (a Proveedores):**
