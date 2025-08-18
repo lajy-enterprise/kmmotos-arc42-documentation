@@ -10,7 +10,7 @@ El alcance de este proyecto se centra exclusivamente en la creación de una apli
 |---|---|---|
 | **Osman Garrido** (CEO) | Patrocinador del Proyecto / Líder Ejecutivo | Retorno de inversión (ROI) positivo, cumplimiento de objetivos estratégicos, crecimiento y estabilidad de la empresa, y una visión clara del progreso del proyecto. |
 | **Saul Cruz** (Coordinador de SAC) | Líder de Área / Usuario Clave | Un sistema que mejore la eficiencia y calidad del servicio al cliente (SAC), fácil integración con procesos existentes y herramientas que optimicen la gestión de SAC. |
-| **Eysthen Roney** (Coordinador de IR y Seguridad) | Líder de Área / Experto en Seguridad | Robustas medidas de ciberseguridad, cumplimiento de normativas de seguridad de la información, protección de datos sensibles, y planes de contingencia para cualquier incidente. |
+| **Eysthen Roney** (Coordinador de IT y Seguridad) | Líder de Área / Experto en Seguridad | Robustas medidas de ciberseguridad, cumplimiento de normativas de seguridad de la información, protección de datos sensibles, y planes de contingencia para cualquier incidente. |
 | **Rod, Alexis y Luis** (Grupo de Desarrolladores) | Ejecutores del Proyecto / Equipo Técnico | Requisitos claros y bien definidos, herramientas y recursos adecuados, soporte técnico cuando sea necesario, y un ambiente de trabajo colaborativo que fomente la innovación. |
 
 ## Principales Objetivos de Calidad
