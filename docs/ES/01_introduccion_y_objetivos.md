@@ -6,12 +6,21 @@ El alcance de este proyecto se centra exclusivamente en la creación de una apli
 
 ## Principales Partes Interesadas
 
-| Parte Interesada                                  | Rol                                         | Expectativas                                                                                                                                                                     |
-| ------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Osman Garrido** (CEO)                           | Patrocinador del Proyecto / Líder Ejecutivo | Retorno de inversión (ROI) positivo, cumplimiento de objetivos estratégicos, crecimiento y estabilidad de la empresa, y una visión clara del progreso del proyecto.              |
-| **Saul Cruz** (Coordinador de SAC)                | Líder de Área / Usuario Clave               | Un sistema que mejore la eficiencia y calidad del servicio al cliente (SAC), fácil integración con procesos existentes y herramientas que optimicen la gestión de SAC.           |
-| **Eysthen Roney** (Coordinador de IT y Seguridad) | Líder de Área / Experto en Seguridad        | Robustas medidas de ciberseguridad, cumplimiento de normativas de seguridad de la información, protección de datos sensibles, y planes de contingencia para cualquier incidente. |
-| **Rod, Alexis y Luis** (Grupo de Desarrolladores) | Ejecutores del Proyecto / Equipo Técnico    | Requisitos claros y bien definidos, herramientas y recursos adecuados, soporte técnico cuando sea necesario, y un ambiente de trabajo colaborativo que fomente la innovación.    |
+| Parte Interesada                                      | Rol                                                                          | Expectativas                                                                                                                                                                                                                      |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Osman Garrido** (CEO)                               | Patrocinador del Proyecto / Líder Ejecutivo                                  | Retorno de inversión (ROI) positivo, cumplimiento de objetivos estratégicos, crecimiento y estabilidad de la empresa, y una visión clara del progreso del proyecto.                                                               |
+| **Saul Cruz** (Coordinador de SAC)                    | Líder de Área / Usuario Clave                                                | Un sistema que mejore la eficiencia y calidad del servicio al cliente (SAC), fácil integración con procesos existentes y herramientas que optimicen la gestión de SAC.                                                            |
+| **Eysthen Roney** (Coordinador de IT y Seguridad)     | Líder de Área / Experto en Seguridad                                         | Robustas medidas de ciberseguridad, cumplimiento de normativas de seguridad de la información, protección de datos sensibles, y planes de contingencia para cualquier incidente.                                                  |
+| **Luis Arroyo** (Desarrollador)                       | Líder Técnico / Ejecutor de propuesta actual en base a propuestas anteriores | Requisitos claros y bien definidos, herramientas y recursos adecuados, soporte técnico cuando sea necesario, un ambiente de trabajo colaborativo que fomente la innovación, y el cumplimiento de los hitos técnicos del proyecto. |
+| **Rod Rodriguez, Alexis Hernandez** (Desarrolladores) | Ejecutores del Proyecto / Equipo Técnico                                     | Requisitos claros y bien definidos, herramientas y recursos adecuados, soporte técnico cuando sea necesario, y un ambiente de trabajo colaborativo que fomente la innovación.                                                     |
+
+### Antiguos Colaboradores del Proyecto
+
+| Parte Interesada | Rol                   | Logros                                                                                                              |
+| :--------------- | :-------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| Erick Zelaya     | Líder Técnico inicial | Elaboró la propuesta inicial del sistema multi-inquilino (multitenancy) en base a Laravel.                          |
+| David Delcid     | Segundo Líder Técnico | Ejecutó la propuesta de infraestructura utilizando Docker y planteó la arquitectura del frontend en Sakai PrimeVue. |
+| Jesus Peña       | Desarrollador         | Realizó contribuciones como desarrollador en el proyecto.                                                           |
 
 ## Principales Objetivos de Calidad
 
@@ -424,48 +433,8 @@ Una gestión financiera sólida es esencial para la sostenibilidad y el crecimie
 
 ---
 
-## Apartado Técnico Detallado
-
-### Infraestructura de Contenedores (Docker)
-
-Todos los componentes de la aplicación se ejecutarán dentro de contenedores Docker, lo que garantiza:
-
-- **Portabilidad:** El entorno de desarrollo y producción son idénticos, eliminando problemas de "funciona en mi máquina".
-- **Aislamiento:** Cada servicio se ejecuta en su propio contenedor, con sus propias dependencias, evitando conflictos.
-- **Escalabilidad:** Facilita la escalabilidad individual de cada servicio si fuera necesario en el futuro (aunque el backend principal es monolítico, los servicios de base de datos o caché pueden escalarse independientemente) o ya de por sí sacarse a un servicio en un servidor dedicado, como es el caso de PostgreSQL, MongoDB y Redis (que es lo más óptimo).
-
-Los contenedores específicos serán:
-
-- **Contenedor para Laravel (Backend):** Contendrá la aplicación Laravel 11 con Octane y Swoole.
-- **Contenedor para PostgreSQL:** Servirá como la base de datos relacional principal, ideal para datos estructurados y transaccionales.
-- **Contenedor para Redis:** Para caching de alto rendimiento y gestión de sesiones de Laravel.
-- **Contenedor para MongoDB:** Para el almacenamiento de datos no relacionales, fundamental para el resguardo y optimización de reportes e información financiera.
-- **Contenedor para Node.js:** Este contenedor se usará para servir la aplicación Vue.js y para la compilación de assets de frontend.
-- **Contenedor para Nginx (Proxy Inverso):** Actuará como el punto de entrada para todas las solicitudes web, redirigiéndolas al contenedor de Laravel para las peticiones de API y al contenedor de Node.js (o un servidor web estático dentro del mismo contenedor) para servir los archivos del frontend Vue.js.
-
-Todos estos contenedores estarán configurados para operar dentro de la misma red Docker, permitiendo una comunicación interna eficiente y segura entre ellos.
-
-### Backend: Laravel 11 (Monolítico Modular)
-
-La elección de un backend monolítico modular con Laravel 11 es óptima para KMMotos debido a la necesidad de alta optimización en la iteración de datos y la gestión centralizada de un volumen creciente de información. Esta arquitectura permite mantener la lógica de negocio cohesiva y facilita la comunicación entre módulos, lo cual es vital para operaciones como la actualización de inventario tras una venta o la integración de datos de clientes con tareas de RRHH.
-
-- **Laravel 11:** La última versión del framework PHP, ofreciendo mejoras en rendimiento, nuevas funcionalidades y una estructura más limpia.
-- **Arquitectura de Servicios y Repositorios:** Se implementará una arquitectura de servicios de repositorio. Esto significa que la lógica para acceder y manipular los datos de la base de datos (PostgreSQL y MongoDB) estará encapsulada en clases de repositorio. Esta abstracción agilizará el trabajo y facilitará el desarrollo al separar la lógica de negocio en clases de servicios del acceso a datos. Permite cambiar la implementación de la base de datos subyacente sin afectar directamente el código de la lógica de negocio, facilita las pruebas unitarias y promueve un código más limpio y mantenible.
-- **Tenancy for Laravel:** Habilitará la capacidad multi-tenant, permitiendo que la misma aplicación atienda a múltiples "inquilinos" (por ejemplo, diferentes sucursales o franquicias de KMMotos) con bases de datos o esquemas de datos separados, pero con una única base de código. Esto simplifica el mantenimiento y la escalabilidad horizontal.
-- **Laravel Octane con Swoole:** Esta combinación es fundamental para alcanzar un alto rendimiento. Octane permite que Laravel se ejecute como un proceso persistente, utilizando el servidor de aplicaciones de alto rendimiento Swoole. Esto elimina la necesidad de recargar el framework en cada solicitud, reduciendo drásticamente la latencia y aumentando el rendimiento general de la API, lo que es crítico para una aplicación con intensa interacción de datos como un POS o un sistema de inventario.
-- **Laravel Sanctum:** Gestionará la autenticación de la API. Sanctum proporciona un sistema de autenticación ligero y seguro para SPA (Single Page Applications) como Vue.js, manejando tokens de API y sesiones basadas en cookies/token para proteger las rutas del backend.
-
-### Frontend: Vue.js
-
-- **Vue.js:** Se eligió Vue.js por su curva de aprendizaje suave, excelente documentación y la capacidad de construir Single Page Applications (SPAs) reactivas y eficientes.
-- **No se utiliza Nuxt.js:** La decisión de no usar Nuxt.js se basa en el hecho de que no se requiere Server-Side Rendering (SSR) para esta aplicación de dashboard interno. Nuxt.js añade una capa de complejidad y dependencia adicional (a menudo requiriendo un servidor Node.js dedicado para el SSR) que no es necesaria para el alcance de este proyecto, donde el objetivo es una aplicación web de dashboard privada, optimizando la facilidad de desarrollo y la independencia del backend.
-- **Plantilla PrimeVue (Sakay):** La implementación de la plantilla Sakay de PrimeVue es una estrategia clave para evitar invertir tiempo en UX/UI desde cero. PrimeVue proporciona un conjunto robusto de componentes UI listos para usar, que ya tienen estilos y funcionalidades predefinidas, además de una documentación exhaustiva. Esto acelera significativamente el desarrollo del frontend, permitiendo al equipo enfocarse en la lógica del negocio y la integración de datos sin preocuparse por los detalles de diseño o la construcción de componentes de interfaz. No obstante, se pueden realizar componentes _wrappers_ que encapsulen la lógica de aplicación necesaria (según sea el caso) para trabajar encima de un componente de PrimeVue. Se sugiere encarecidamente trabajar de la forma planteada para evitar invertir tiempo en labores innecesarias.
-
----
-
 ## Notas y Consideraciones
 
 Este documento es una guía estratégica y un plan de alto nivel, no un manual de implementación paso a paso. La creación de la aplicación KMMotos es un proceso dinámico, por lo que este plan está sujeto a cambios y evoluciones a medida que avanza el desarrollo y se identifican nuevas necesidades o mejoras.
 
 Por favor, no lo utilice como una guía inmutable. Su propósito es establecer una visión clara, definir las fases, los módulos clave y la arquitectura técnica. Las decisiones específicas de implementación, los detalles técnicos y el orden preciso de las tareas pueden ajustarse para optimizar el proceso de desarrollo y responder a los desafíos que surjan.
-
