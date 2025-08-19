@@ -29,7 +29,7 @@ El alcance de este proyecto se centra exclusivamente en la creación de una apli
 3. **Mantenibilidad**: Diseñar la aplicación para que sea fácil de actualizar, depurar y adaptar a nuevas funcionalidades o cambios en los procesos de negocio. Esto permitirá incorporar rápidamente nuevos módulos, integrar futuras tecnologías o ajustar la normativa sin interrupciones significativas.
 4. **Usabilidad**: Ofrecer una interfaz intuitiva y fácil de usar para todos los empleados (ventas, almacén, administración). El objetivo es minimizar la curva de aprendizaje, reducir errores operativos y agilizar las tareas diarias, lo que contribuirá a una mayor eficiencia y satisfacción del usuario
 
-Estos objetivos son cruciales para el diseño y desarrollo de tu ERP, y servirán como guía para todas las decisiones técnicas y funcionales que se tomen.
+Estos objetivos son cruciales para el diseño y desarrollo del ERP Final, y servirán como guía para todas las decisiones técnicas y funcionales que se tomen.
 
 # Fases de Desarrollo de KMMotos
 
@@ -66,7 +66,7 @@ El objetivo principal es crear un entorno de desarrollo reproducible y escalable
 Esta fase marca el inicio de la funcionalidad central del negocio: la capacidad de registrar ventas y gestionar la información básica de la empresa.
 
 **Propósito:**
-Se prioriza la creación de un sistema POS sobre cualquier otra fase, porque es el núcleo operacional de una empresa de ventas. Sin la capacidad de registrar ventas, la información de inventario, clientes o finanzas carece de sentido práctico. Un POS funcional permite a la empresa comenzar a operar, generar ingresos y recopilar datos esenciales desde el día uno, sentando las bases para futuras expansiones.
+Se prioriza la creación de un sistema POS sobre cualquier otra fase, porque es el núcleo operacional de una empresa donde su modelo de negocio se centra en ventas. Sin la capacidad de registrar ventas, la información de inventario, clientes o finanzas carece de sentido práctico. Un POS funcional permite a la empresa comenzar a operar, generar ingresos y recopilar datos esenciales desde el día uno, sentando las bases para futuras expansiones.
 
 **Módulos Clave:**
 

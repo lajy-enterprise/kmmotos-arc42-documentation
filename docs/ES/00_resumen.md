@@ -1,8 +1,8 @@
-# Documentacion de Aplicacion Km motos Dev 2.0 - Sistema de Gestión Empresarial para Venta de Motocicletas
+# Documentacion de Aplicacion Km motos Dev 2.0 - Sistema de Gestión Empresarial para Venta de Insumos, repuestos y todo lo relacionado con Motocicletas
 
 ## Introducción
 
-Esta documentacion detalla el plan de desarrollo para la aplicación KMMotos, un sistema integral de gestión empresarial diseñado para optimizar las operaciones de una empresa dedicada a la venta de motocicletas. El proyecto se aborda en fases incrementales, lo que permite una entrega de valor progresiva y una adaptación ágil a las necesidades del negocio.
+Esta documentacion detalla el plan de desarrollo para la aplicación KMMotos, un sistema integral de gestión empresarial diseñado para optimizar las operaciones de una empresa dedicada a la venta de Insumos, repuestos y todo lo relacionado con motocicletas. El proyecto se aborda en fases incrementales, lo que permite una entrega de valor progresiva y una adaptación ágil a las necesidades del negocio.
 
 ## Alcance del Proyecto
 
