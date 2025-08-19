@@ -31,6 +31,10 @@ Este repositorio está organizado en diversas secciones, que forman parte de la 
 12. [11. Riesgos y Deuda Técnica](docs/ES/pendiente_plantilla/11_riesgos_y_deuda_tecnica.md)
 13. [12. Glosario](docs/ES/pendiente_plantilla/12_glosario.md)
 
+## Backlog
+
+Se puede acceder al [**Backlog**](backlog.md) para ver las tareas pendientes y realizadas planteadas hasta el momento.
+
 ## Recursos
 
 Los siguientes recursos apoyan la documentación:
