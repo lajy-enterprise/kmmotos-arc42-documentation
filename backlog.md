@@ -1,6 +1,10 @@
 ## Backlog de la Aplicación KMMotos: Un Plan de Desarrollo por Fases
 
-    Este documento detalla el plan de desarrollo de la aplicación de gestión empresarial para KMMotos, estructurado en fases de implementación. Cada fase se enfoca en funcionalidades clave, permitiendo un enfoque iterativo y la entrega de un Producto Mínimo Viable (MVP) que evoluciona con las necesidades del negocio.
+Este documento detalla el plan de desarrollo de la aplicación de gestión empresarial para KMMotos, estructurado en fases de implementación. Cada fase se enfoca en funcionalidades clave, permitiendo un enfoque iterativo y la entrega de un Producto Mínimo Viable (MVP) que evoluciona con las necesidades del negocio.
+
+Para mas informacion sobre las fases de desarrollo y los módulos clave, por favor revisa el [Plan de Desarrollo](docs/ES/01_introduccion_y_objetivos.md).
+
+- **Nota:** se omite fase 1 (Arquitectura e Infraestructura Básica) ya que no se requiere desarrollar en esta fase.
 
 ### **Fase 2: Sistema POS (Punto de Venta) MVP (Producto Mínimo Viable)**
 
@@ -61,7 +65,7 @@
   - [ ] Comisiones en rutas (Grupo de vendedores)
 - [ ] **Gestión Detallada de Clientes:**
   - [ ] Segmentación de clientes (ej. por tipo de motocicleta, frecuencia de compra).
-  - [ ] Campos personalizados para perfiles de clientes, (mapas de ubicaciones, preferencias, interaccion con otros modulos, etc).
+  - [ ] Campos personalizados para perfiles de clientes, (mapas de ubicaciones, preferencias, interaccion con otros modulos, puntos, vales, etc).
 - [ ] **Gestión de Interacciones con Clientes:**
   - [ ] Registro de llamadas, correos electrónicos, visitas, etc.
   - [ ] Historial de comunicaciones.
