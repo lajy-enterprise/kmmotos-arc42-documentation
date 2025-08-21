@@ -2,36 +2,44 @@
 
 ## Descripción General
 
-Esta sección detalla los riesgos conocidos y la deuda técnica dentro de la arquitectura de la Estrella de la Muerte. Identificar y documentar estos riesgos permite una planificación proactiva para mitigar posibles problemas que podrían afectar el rendimiento, la seguridad y la confiabilidad a largo plazo del sistema.
+Esta sección detalla los riesgos conocidos y la deuda técnica dentro de la arquitectura del sistema KMMotos. Identificar y documentar estos riesgos permite una planificación proactiva para mitigar posibles problemas que podrían afectar el rendimiento, la seguridad, la escalabilidad y la viabilidad financiera a largo plazo del sistema.
 
 ## Principales Riesgos
 
-1. **Vulnerabilidad del Núcleo del Reactor**
-   - **Descripción**: El reactor central, aunque eficiente, representa un **punto único de fallo**. Un ataque dirigido a esta área podría tener consecuencias catastróficas.
-   - **Mitigación**: Implementar blindaje mejorado y compartimentación alrededor del núcleo del reactor para protegerlo contra ataques directos.
+1. **Dependencia del VPS Único**
+   - **Descripción**: La consolidación de toda la aplicación en un VPS único representa un **punto único de fallo**. Un problema de hardware o conectividad podría afectar todas las operaciones comerciales.
+   - **Mitigación**: Implementar respaldos automáticos diarios, monitoreo proactivo del servidor, y tener un plan de contingencia para migración rápida a otro VPS en caso de emergencia.
 
-2. **Potencial de Acceso No Autorizado**
-   - **Descripción**: La complejidad de los protocolos de seguridad de la Estrella de la Muerte podría contener vulnerabilidades pasadas por alto que pueden ser explotadas por intrusos expertos.
-   - **Mitigación**: Realizar auditorías de seguridad periódicas y mejorar el monitoreo para detectar cualquier actividad sospechosa rápidamente.
+2. **Limitaciones de Escalabilidad del Monolito**
+   - **Descripción**: Aunque la arquitectura monolítica modular es eficiente para el contexto actual, podría enfrentar limitaciones de escalabilidad si el negocio crece exponencialmente o se requieren integraciones complejas con sistemas externos.
+   - **Mitigación**: Diseñar módulos con interfaces bien definidas para facilitar futuras extracciones a microservicios, monitorear métricas de rendimiento para detectar cuellos de botella temprano.
 
-3. **Sobrecarga del Sistema Durante Operaciones de Alta Energía**
-   - **Descripción**: La operación simultánea de componentes de alta energía, como el superláser y los generadores de escudos, podría sobrecargar el sistema de distribución de energía.
-   - **Mitigación**: Establecer un protocolo de gestión de energía que priorice la asignación a sistemas críticos para la misión.
+3. **Riesgo de Pérdida de Conocimiento del Equipo**
+   - **Descripción**: Con un equipo de desarrollo pequeño, la pérdida de miembros clave podría comprometer la continuidad del proyecto y el mantenimiento del sistema.
+   - **Mitigación**: Implementar documentación exhaustiva, estándares de codificación estrictos, revisiones de código obligatorias, y capacitación cruzada entre miembros del equipo.
 
-4. **Problemas de Sincronización y Consistencia de Datos**
-   - **Descripción**: Con múltiples subsistemas operando simultáneamente, los desafíos de sincronización de datos podrían llevar a discrepancias que afecten la toma de decisiones.
-   - **Mitigación**: Probar regularmente los protocolos de sincronización de datos y emplear mecanismos de redundancia para asegurar la integridad de los datos en todos los sistemas.
+4. **Problemas de Consistencia Multi-Tenancy**
+   - **Descripción**: La gestión de múltiples tenancies podría presentar desafíos de sincronización de datos y consistencia entre empresas, especialmente durante transferencias inter-empresa.
+   - **Mitigación**: Implementar mecanismos robustos de transacciones distribuidas, monitoreo de integridad de datos, y procesos de reconciliación automáticos.
+
+5. **Limitaciones Presupuestarias para Crecimiento**
+   - **Descripción**: Las restricciones presupuestarias actuales podrían limitar futuras expansiones de infraestructura o contratación de personal especializado cuando sea necesario.
+   - **Mitigación**: Planificar escalamiento incremental, priorizar funcionalidades según ROI, y mantener arquitectura flexible para optimizar costos.
 
 ## Deuda Técnica
 
-1. **Componentes Antiguos**: Algunos subsistemas se basan en tecnología obsoleta, lo que complica su integración con módulos más nuevos y podría afectar el rendimiento.
-2. **Lagunas en Documentación**: La documentación incompleta en ciertas áreas dificulta las actualizaciones del sistema y la resolución de problemas para los equipos de ingeniería.
-3. **Arquitectura Inflexible**: La estructura rígida de algunos módulos limita la capacidad de modificar o expandir ciertas capacidades sin rediseños importantes.
+1. **Normalización de Base de Datos Heredada**: Los problemas históricos de normalización en "Mi POS Virtual" requieren refactorización cuidadosa para evitar cuellos de botella de rendimiento.
+
+2. **Dependencia de Plantillas de Terceros**: El uso de PrimeVue (Sakay) puede limitar la personalización futura de la interfaz y crear dependencias de actualizaciones externas.
+
+3. **Falta de Testing Automatizado Inicial**: La presión por entregar funcionalidad temprana podría resultar en cobertura de testing insuficiente, incrementando riesgos de regresión.
+
+4. **Configuración Manual de Despliegue**: La ausencia de CI/CD automatizado aumenta el riesgo de errores de despliegue y tiempo de recuperación ante problemas.
 
 ## Diagrama
 
-> **TODO:** _(Incluir una tabla o diagrama que resuma los riesgos, su impacto potencial y las estrategias de mitigación.)_
+> **TODO:** _(Incluir una tabla o diagrama que resuma los riesgos, su impacto potencial, probabilidad de ocurrencia y las estrategias de mitigación específicas para el contexto de KMMotos.)_
 
 ## Motivación
 
-Documentar los riesgos y la deuda técnica garantiza que los desafíos conocidos sean visibles para todas las partes interesadas. Al abordar estos problemas de manera proactiva, la arquitectura de la Estrella de la Muerte puede estar mejor preparada para mantener la confiabilidad, seguridad y adaptabilidad en misiones futuras.
+Documentar los riesgos y la deuda técnica garantiza que los desafíos conocidos sean visibles para todas las partes interesadas del proyecto KMMotos. Al abordar estos problemas de manera proactiva, el sistema puede estar mejor preparado para mantener la confiabilidad operativa, la viabilidad económica y la adaptabilidad a medida que el negocio evoluciona. Esta transparencia es crucial para la toma de decisiones informadas sobre inversiones futuras en tecnología y recursos humanos.
