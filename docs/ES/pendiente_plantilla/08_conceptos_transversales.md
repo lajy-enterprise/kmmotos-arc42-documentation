@@ -2,30 +2,30 @@
 
 ## Descripción General
 
-Los conceptos transversales definen los estándares técnicos, principios y soluciones aplicados en toda la arquitectura de la Estrella de la Muerte. Estos principios afectan a múltiples componentes o capas, asegurando un enfoque unificado en las prácticas técnicas y mejorando la resiliencia, seguridad y estabilidad operativa del sistema.
+Los conceptos transversales definen los estándares técnicos, principios y soluciones aplicados en toda la arquitectura del sistema KMMotos. Estos principios afectan a múltiples componentes o capas, asegurando un enfoque unificado en las prácticas técnicas y mejorando la eficiencia, seguridad y estabilidad operativa del sistema de gestión empresarial.
 
 ## Principales Conceptos Transversales
 
-1. **Seguridad**: Protocolos estrictos controlan el acceso a sistemas críticos. Esto incluye cifrado de comunicaciones, autenticación multifactor para el personal y monitoreo continuo para detectar intentos de acceso no autorizados. La seguridad se integra en cada capa para proteger la estación de amenazas internas y externas.
+1. **Seguridad y Control de Acceso**: Protocolos estrictos controlan el acceso a funciones críticas del sistema. Incluye autenticación con Laravel Sanctum, gestión de roles y permisos con Spatie Laravel Permission, y cifrado de comunicaciones entre componentes. Cada área de negocio (ventas, RRHH, finanzas) tiene permisos específicos según el perfil del empleado.
 
-2. **Confiabilidad y Tolerancia a Fallos**: Diseñada con redundancia en sistemas críticos (por ejemplo, enfriamiento del reactor y soporte vital), la Estrella de la Muerte puede manejar fallos de componentes sin interrumpir las operaciones. Los sistemas clave emplean conmutación por error automática y se asignan recursos de respaldo para garantizar la continuidad de la misión.
+2. **Confiabilidad y Tolerancia a Fallos**: El sistema está diseñado con redundancia en componentes críticos (bases de datos, caché, sesiones). Los sistemas clave emplean mecanismos de recuperación automática y se utilizan colas de procesos (Jobs/Queues) para manejar operaciones asíncronas sin interrumpir la experiencia del usuario durante fallos temporales.
 
-3. **Gestión de Errores y Respuesta a Incidentes**: Un enfoque estandarizado para la gestión de errores, registro y respuesta a incidentes asegura una acción inmediata en caso de fallos. Los errores se registran y monitorean en tiempo real, y las alertas se envían a Comando y Control, permitiendo un diagnóstico y solución rápidos.
+3. **Consistencia Transaccional**: Fundamental para un sistema POS/ERP, garantiza que las operaciones críticas (ventas, transferencias de inventario, pagos) mantengan la integridad de datos. La arquitectura monolítica modular permite transacciones ACID nativas en PostgreSQL, eliminando problemas de consistencia eventual típicos de sistemas distribuidos.
 
-4. **Monitoreo y Observabilidad**: El monitoreo proactivo proporciona visibilidad total de los sistemas principales de la Estrella de la Muerte. Los paneles de control en tiempo real monitorean la salud, rendimiento y estado de todos los componentes, y se rastrean métricas críticas (p. ej., temperatura del reactor, integridad de escudos) de manera continua. Los mecanismos de observabilidad permiten a Comando detectar problemas antes de que se intensifiquen.
+4. **Patrón Servicio-Repositorio**: Arquitectura que separa la lógica de negocio (Servicios) del acceso a datos (Repositorios). Facilita el mantenimiento, testing y permite cambios en las capas de datos sin afectar la lógica empresarial. Cada módulo (POS, CRM, RRHH, Finanzas) implementa este patrón consistentemente.
 
-5. **Consistencia e Integridad de Datos**: Los sistemas mantienen consistencia de datos en todos los subsistemas, particularmente en navegación, puntería y soporte vital. Verificaciones de integridad y sincronizaciones regulares evitan conflictos y aseguran un flujo de información preciso en sistemas interconectados.
+5. **Gestión de Eventos y Colas de Procesos**: Sistema de eventos que permite la comunicación asíncrona entre módulos. Las colas de procesos manejan tareas pesadas (reportes financieros, sincronización multi-tenancy, generación de documentos) sin bloquear la interfaz de usuario ni las operaciones críticas.
 
-6. **Optimización del Rendimiento**: Los sistemas principales están optimizados para alta eficiencia, especialmente en gestión de energía, sistemas de enfriamiento y asignación de recursos. El rendimiento se mide continuamente, y los componentes críticos se someten a pruebas de estrés periódicas para asegurar estabilidad durante escenarios de alta carga.
+6. **Optimización del Rendimiento**: Los sistemas están optimizados para alta eficiencia utilizando Laravel Octane con Swoole para mantener la aplicación en memoria, Redis para caché de consultas frecuentes, y MongoDB para reportes complejos. El rendimiento se mide continuamente para asegurar tiempos de respuesta óptimos durante operaciones de venta.
 
-7. **Gestión de Capacidad y Escalabilidad**: La arquitectura de la Estrella de la Muerte está diseñada para escalabilidad, permitiendo expandir ciertos sistemas (como matrices de sensores o módulos de armas) y reemplazar componentes modulares según sea necesario. La planificación de capacidad asegura que todos los sistemas operen dentro de umbrales seguros.
+7. **Multi-Tenancy y Escalabilidad**: La arquitectura soporta múltiples empresas y sucursales usando Tenancy for Laravel, permitiendo escalabilidad horizontal sin comprometer la segregación de datos. Cada tenancy mantiene sus datos aislados pero comparte la misma base de código, optimizando recursos y mantenimiento.
 
-8. **Automatización Operacional**: Scripts y herramientas de automatización manejan tareas rutinarias como actualizaciones de sistemas, parches de seguridad y asignación de recursos. Las respuestas automáticas a incidentes reducen la intervención manual, permitiendo que el equipo se enfoque en objetivos críticos de misión.
+8. **Automatización Operacional**: Colas de procesos y eventos automatizan tareas rutinarias como generación de reportes, sincronización de datos entre tenancies, cálculos de nómina y consolidación de información financiera. La automatización reduce la intervención manual y minimiza errores operativos.
 
 ## Diagrama
 
-> **TODO:** _(Incluir diagramas o tablas según sea necesario para ilustrar cómo se aplican estos conceptos transversales a diferentes partes de la arquitectura de la Estrella de la Muerte.)_
+> **TODO:** _(Incluir diagramas o tablas según sea necesario para ilustrar cómo se aplican estos conceptos transversales a diferentes módulos de la arquitectura KMMotos: POS, CRM, RRHH, ERP y Finanzas.)_
 
 ## Motivación
 
-Los conceptos transversales establecen un enfoque coherente en estándares técnicos y prácticas de diseño, mejorando la resiliencia, seguridad y confiabilidad general de la Estrella de la Muerte. La adopción de estos principios permite operaciones consistentes, una respuesta rápida a problemas y alineación con los objetivos a largo plazo del Imperio Galáctico.
+Los conceptos transversales establecen un enfoque coherente en estándares técnicos y prácticas de diseño, mejorando la eficiencia, mantenibilidad y confiabilidad general del sistema KMMotos. La adopción de estos principios permite operaciones consistentes, desarrollo ágil con el equipo pequeño, y alineación con los objetivos de optimización de costos y recursos del proyecto. La arquitectura monolítica modular facilita la implementación de estos conceptos de manera centralizada y eficiente.
